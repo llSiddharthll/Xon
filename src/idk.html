@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Live Trading Area Chart</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #1e1e1e;
+    }
+    canvas {
+      max-width: 900px;
+      width: 100%;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    }
+  </style>
+</head>
+<body>
+  <canvas id="tradingChart"></canvas>
+
+  <script>
+    const ctx = document.getElementById('tradingChart').getContext('2d');
+
+    const maxPoints = 30;
+    let labels = Array.from({ length: maxPoints }, (_, i) => i);
+    let prices = Array(maxPoints).fill(100);
+    let currentPrice = 100;
+
+    // Function to generate custom point styles (↑↓)
+    function generateArrows(priceArray) {
+      return priceArray.map((p, i, arr) => {
+        if (i === 0) return 'circle';
+        return p >= arr[i - 1] ? 'circle' : 'triangle';
+      });
+    }
+
+    // Function to generate gradient fill
+    function getGradient(ctx, chartArea, isProfit) {
+      const gradient = ctx.createLinearGradient(0, chartArea.top, 0, chartArea.bottom);
+      gradient.addColorStop(0, isProfit ? 'rgba(0, 200, 0, 0.3)' : 'rgba(200, 0, 0, 0.3)');
+      gradient.addColorStop(1, 'rgba(255, 255, 255, 0)');
+      return gradient;
+    }
+
+    const data = {
+      labels: labels,
+      datasets: [{
+        label: 'Price',
+        data: prices,
+        fill: true,
+        backgroundColor: (context) => {
+          const chart = context.chart;
+          const {ctx, chartArea} = chart;
+          if (!chartArea) return null;
+          const isProfit = currentPrice >= 100;
+          return getGradient(ctx, chartArea, isProfit);
+        },
+        borderColor: 'green',
+        pointBackgroundColor: prices.map(p => p >= 100 ? 'green' : 'red'),
+        pointBorderColor: prices.map(p => p >= 100 ? 'green' : 'red'),
+        pointRadius: 5,
+        pointStyle: generateArrows(prices),
+        tension: 0.4
+      }]
+    };
+
+    const config = {
+      type: 'line',
+      data: data,
+      options: {
+        responsive: true,
+        animation: {
+          duration: 500
+        },
+        scales: {
+          x: {
+            title: { display: true, text: 'Time' },
+            grid: { display: false }
+          },
+          y: {
+            title: { display: true, text: 'Price' },
+            suggestedMin: currentPrice - 20,
+            suggestedMax: currentPrice + 20
+          }
+        },
+        plugins: {
+          tooltip: {
+            callbacks: {
+              label: (ctx) => {
+                const prev = ctx.dataset.data[ctx.dataIndex - 1];
+                const curr = ctx.raw;
+                const change = (prev !== undefined) ? (curr - prev).toFixed(2) : '0.00';
+                const arrow = change >= 0 ? '↑' : '↓';
+                return `${arrow} ${curr.toFixed(2)} (${change})`;
+              }
+            }
+          },
+          legend: { display: false }
+        }
+      }
+    };
+
+    const chart = new Chart(ctx, config);
+
+    function updateChart() {
+      prices.shift();
+      labels.shift();
+
+      const change = (Math.random() * 4 - 2);
+      currentPrice += change;
+      prices.push(currentPrice);
+      labels.push(labels[labels.length - 1] + 1);
+
+      const pointStyle = generateArrows(prices);
+      const pointColor = prices.map(p => p >= 100 ? 'green' : 'red');
+
+      chart.data.labels = labels;
+      chart.data.datasets[0].data = prices;
+      chart.data.datasets[0].pointStyle = pointStyle;
+      chart.data.datasets[0].pointBackgroundColor = pointColor;
+      chart.data.datasets[0].pointBorderColor = pointColor;
+      chart.options.scales.y.suggestedMin = currentPrice - 20;
+      chart.options.scales.y.suggestedMax = currentPrice + 20;
+      chart.update();
+    }
+
+    setInterval(updateChart, 1000);
+  </script>
+</body>
+</html>

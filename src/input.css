@@ -17,7 +17,7 @@
     color: transparent;
     background: linear-gradient(
       to right,
-      #ec4899,
+      #ecde48,
       #e7f65c
     ); /* Tailwind colors */
     background-size: 100%; /* Ensure the gradient covers the area */
@@ -29,7 +29,7 @@
     background: radial-gradient(
       114.99% 94.16% at 72.92% 82.18%,
       #111111 47.39%,
-      #091534 68.23%,
+      #343309 68.23%,
       #d6cf4d 86.63%
     );
     animation: bounce 5s infinite;
@@ -73,7 +73,7 @@
     background: radial-gradient(
       48.69% 39.15% at 50.02% 50.04%,
       rgba(241, 248, 34, 0.5) 0.01%,
-      rgba(249, 233, 9, 0.3) 23.96%,
+      rgba(249, 241, 9, 0.3) 23.96%,
       rgba(77, 83, 0, 0) 90%
     );
     top: 0;
@@ -88,8 +88,8 @@
     position: absolute;
     background: radial-gradient(
       48.69% 39.15% at 50.02% 50.04%,
-      #53ffc1 0.01%,
-      rgba(25, 54, 99, 0.3) 53.96%,
+      #c6ff53 0.01%,
+      rgba(92, 99, 25, 0.3) 53.96%,
       rgba(0, 0, 0, 0) 100%
     );
     top: 25%;
@@ -163,7 +163,7 @@
     position: absolute;
     background: radial-gradient(
       120.5% 130.5% at -19.95% 33.74%,
-      #190f2e 77.39%,
+      #2b2e0f 77.39%,
       #838740 114.59%
     );
     width: 161px;
@@ -198,7 +198,7 @@
       107.91% 147.91% at 140.21% 149.09%,
       #ab432c 0%,
       #460615 10.9%,
-      #543871 156.63%
+      #6d7138 156.63%
     );
     filter: blur(6.66516px);
     width: 85px;
@@ -1138,7 +1138,7 @@
     background-image: linear-gradient(144deg, #f9ff40, #f3e142 50%, #00ddeb);
     border: 0;
     border-radius: 8px;
-    box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+    box-shadow: rgba(252, 246, 65, 0.2) 0 15px 30px -5px;
     box-sizing: border-box;
     color: #ffffff;
     display: flex;
@@ -1181,9 +1181,9 @@
 
   /* From Uiverse.io by virus231 */
   .hero-btn {
-    background: linear-gradient(140.14deg, #ec540e 15.05%, #d6361f 114.99%)
+    background: linear-gradient(140.14deg, #ecec0e 15.05%, #d0d61f 114.99%)
         padding-box,
-      linear-gradient(142.51deg, #ff9465 8.65%, #af1905 88.82%) border-box;
+      linear-gradient(142.51deg, #f5ff65e7 8.65%, #a1af05f1 88.82%) border-box;
     border-radius: 7px;
     border: 2px solid transparent;
 
@@ -1194,7 +1194,7 @@
     line-height: 20px;
     cursor: pointer;
     transition: all 0.3s;
-    color: white;
+    color: black;
     font-size: 20px;
     font-weight: 500;
   }
