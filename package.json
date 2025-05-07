@@ -1,0 +1,10 @@
+{
+  "devDependencies": {
+    "tailwindcss": "^3.4.17"
+  },
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.5",
+    "countup": "^1.8.2",
+    "countup.js": "^2.8.0"
+  }
+}

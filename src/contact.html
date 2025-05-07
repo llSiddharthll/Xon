@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="./output.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!--fontawesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+
+    <!-- Owl Carousel JS -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+
+        .font-outfit {
+            font-family: "Outfit", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 600;
+            font-style: normal;
+        }
+    </style>
+</head>
+
+<body class="relative font-outfit overflow-x-hidden bg-[#010314] text-white px-5">
+    <nav id="navbar"
+        class="z-30 flex flex-row justify-between items-center uppercase py-4 transition-all duration-500 bg-transparent">
+        <ul class="flex">
+            <li class="flex items-center relative">
+                <img src="./images/logo1.png" alt="" class="h-16" />
+                <span class="relative -left-4 text-2xl">CRE<span class="text-sky-600">BIT</span></span>
+            </li>
+        </ul>
+        <ul
+            class="flex text-sm items-center justify-center gap-14 tracking-widest border-[1px] border-[#ffffff50] rounded-full px-10 py-5">
+            <li>Home</li>
+            <li>Why Blockchain</li>
+            <li>Features</li>
+            <li>Blog</li>
+            <li>Contact</li>
+        </ul>
+        <ul class="flex gap-2">
+            <li class="flex items-center justify-center gap-2 bg-white py-3 px-6 rounded-full text-black">
+                <span class="text-sm">Login</span><span><i class="fa-solid fa-user"></i></span>
+            </li>
+            <li class="bg-pink-500 text-white h-12 w-12 rounded-full flex items-center justify-center">
+                <i class="fa-solid fa-bars"></i>
+            </li>
+        </ul>
+    </nav>
+
+    <section
+        class="relative flex flex-col items-center justify-center w-full h-[50vh] bg-gradient-to-b from-transparent to-[#9b51e0] rounded-b-3xl">
+        <h1 class="text-6xl font-medium">Contact</h1>
+        <p class="flex text-xl font-normal gap-2">
+            <span>IKO</span><span>></span><span>Contact</span>
+        </p>
+        <img class="absolute left-10 top-20 alltuchtopdown"
+            src="https://iko.themegenix.net/blockchain/wp-content/themes/iko/assets/img/images/breadcrumb_shape01.png"
+            alt="Shape" />
+        <img class="absolute right-10 bottom-20 rotateme"
+            src="https://iko.themegenix.net/blockchain/wp-content/themes/iko/assets/img/images/breadcrumb_shape02.png"
+            alt="Shape" />
+    </section>
+
+    <section class="grid grid-cols-4 gap-6 p-20 font-medium">
+        <div class="flex flex-col items-center justify-center gap-2 bg-[#0f101e] py-16 rounded-3xl">
+            <div class="border-[1px] border-[#ffffff30] h-14 w-14 rounded-full flex items-center justify-center"><i class="fa-solid fa-location-dot"></i></div>
+            <div class="text-xl">Location</div>
+            <div class="flex flex-col gap-2 text-xl text-[#ffffff80] font-normal items-center">
+                <span>1901 Thornridge Cir.</span>
+                <span>Shiloh, Hawaii</span>
+            </div>
+        </div>
+        <div class="flex flex-col items-center justify-center gap-2 bg-[#0f101e] py-16 rounded-3xl">
+            <div class="border-[1px] border-[#ffffff30] h-14 w-14 rounded-full flex items-center justify-center"><i class="fa-solid fa-phone"></i></div>
+            <div class="text-xl">Contact</div>
+            <div class="flex flex-col gap-2 text-xl text-[#ffffff80] font-normal items-center">
+                <span>1901 Thornridge Cir.</span>
+                <span>Shiloh, Hawaii</span>
+            </div>
+        </div>
+        <div class="flex flex-col items-center justify-center gap-2 bg-[#0f101e] py-16 rounded-3xl">
+            <div class="border-[1px] border-[#ffffff30] h-14 w-14 rounded-full flex items-center justify-center"><i class="fa-solid fa-envelope"></i></div>
+            <div class="text-xl">Email</div>
+            <div class="flex flex-col gap-2 text-xl text-[#ffffff80] font-normal items-center">
+                <span>1901 Thornridge Cir.</span>
+                <span>Shiloh, Hawaii</span>
+            </div>
+        </div>
+        <div class="flex flex-col items-center justify-center gap-2 bg-[#0f101e] py-16 rounded-3xl">
+            <div class="border-[1px] border-[#ffffff30] h-14 w-14 rounded-full flex items-center justify-center"><i class="fa-solid fa-briefcase"></i></div>
+            <div class="text-xl">Visit Between</div>
+            <div class="flex flex-col gap-2 text-xl text-[#ffffff80] font-normal items-center">
+                <span>1901 Thornridge Cir.</span>
+                <span>Shiloh, Hawaii</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="flex w-full px-20 py-10 mb-20">
+         <div class="left w-[45%]"><iframe class="w-full h-full rounded-l-3xl" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d678.4252412815007!2d76.82001636618472!3d30.63904811815318!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390feb324705dd21%3A0xb1728f7422c2557a!2sChandigarh%20City%20Center!5e0!3m2!1sen!2sin!4v1728812251432!5m2!1sen!2sin" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+         <div class="right w-[55%]">
+            <div class="flex flex-col items-start rounded-r-3xl justify-center gap-10 p-10 bg-[#0f101e]">
+                <h3 class="capitalize text-3xl">Get in touch now</h3>
+                <form action="" class="flex flex-col items-start gap-5 w-full">
+                    <div class="flex w-full gap-5">
+                        <input type="text" name="" id="" placeholder="Your Name" class="bg-[#ffffff15] rounded-full p-4 w-full">
+                        <input type="email" name="" id="" placeholder="Your Email" class="bg-[#ffffff15] rounded-full p-4 w-full">
+                    </div>
+                    <div class="flex w-full gap-5">
+                        <input type="text" name="" id="" placeholder="Mobile No." class="bg-[#ffffff15] rounded-full p-4 w-full">
+                        <input type="email" name="" id="" placeholder="Company" class="bg-[#ffffff15] rounded-full p-4 w-full">
+                    </div>
+                    <textarea name="" id="" rows="5" placeholder="Enter Your Message..." class="bg-[#ffffff15] rounded-3xl w-full p-4"></textarea>
+                    <button class="bg-white hover:bg-pink-400 group w-52 px-2 py-3 transition-all duration-300 rounded-full font-medium flex items-center justify-center gap-5">
+                        <span class="text-black text-sm font-bold group-hover:text-white">Send Message</span><span
+                          class="bg-gradient-to-b from-violet-500 to-pink-500 group-hover:text-white bg-clip-text text-transparent font-bold"><i
+                            class="fa-solid fa-chevron-right"></i></span>
+                      </button>
+                </form>
+            </div>
+         </div>
+    </section>
+
+
+    <section class="relative w-full mb-20">
+        <div class="flex items-center justify-center">
+            <h2 class="bg-clip-text text-5xl text-transparent bg-gradient-to-b from-white to-[#0f101e]">Ask Quick Question</h2>
+        </div>
+        <div class="absolute -bottom-10 w-full h-[60vh] bg-gradient-to-b from-purple-500 to-transparent  rounded-3xl -z-10"></div>
+        <div class="flex w-full gap-10 px-20 py-10 font-medium z-20">
+            <div class="left w-2/3 flex flex-col rounded-2xl items-center justify-center gap-10 p-10 bg-[#0f101e]">
+                <h3 class="capitalize text-3xl">Get in touch now</h3>
+                <form action="" class="flex flex-col items-center gap-5 w-full">
+                    <div class="flex w-full gap-5">
+                        <input type="text" name="" id="" placeholder="Your Name" class="bg-[#ffffff15] rounded-full p-4 w-full">
+                        <input type="email" name="" id="" placeholder="Your Email" class="bg-[#ffffff15] rounded-full p-4 w-full">
+                    </div>
+                    <textarea name="" id="" rows="8" placeholder="Enter Your Message..." class="bg-[#ffffff15] rounded-3xl w-full p-4"></textarea>
+                    <button class="bg-white hover:bg-pink-400 group w-52 px-2 py-3 transition-all duration-300 rounded-full font-medium flex items-center justify-center gap-5">
+                        <span class="text-black text-sm font-bold group-hover:text-white">Send Message</span><span
+                          class="bg-gradient-to-b from-violet-500 to-pink-500 group-hover:text-white bg-clip-text text-transparent font-bold"><i
+                            class="fa-solid fa-chevron-right"></i></span>
+                      </button>
+                </form>
+            </div>
+            <div class="left w-1/3 flex flex-col rounded-2xl items-center justify-center gap-10 p-16 bg-[#0f101e]">
+                <h3 class="capitalize text-3xl">Read Documents</h3>
+                <div class="w-full grid grid-cols-2 gap-5">
+                    <span class="flex flex-col w-full items-center justify-center gap-1">
+                        <span class="flex w-full bg-[#ffffff15] py-8 items-center justify-center rounded-lg text-[#ffffff80] text-4xl text-white"><i aria-hidden="true" class="fas fa-file-pdf"></i></span>
+                        <span class="text-sm">Whitepaper</span>
+                    </span>
+                    <span class="flex flex-col w-full items-center justify-center gap-1">
+                        <span class="flex w-full bg-[#ffffff15] py-8 items-center justify-center rounded-lg text-[#ffffff80] text-4xl text-white"><i aria-hidden="true" class="fas fa-file-pdf"></i></span>
+                        <span class="text-sm">Whitepaper</span>
+                    </span>
+                    <span class="flex flex-col w-full items-center justify-center gap-1">
+                        <span class="flex w-full bg-[#ffffff15] py-8 items-center justify-center rounded-lg text-[#ffffff80] text-4xl text-white"><i aria-hidden="true" class="fas fa-file-pdf"></i></span>
+                        <span class="text-sm">Whitepaper</span>
+                    </span>
+                    <span class="flex flex-col w-full items-center justify-center gap-1">
+                        <span class="flex w-full bg-[#ffffff15] py-8 items-center justify-center rounded-lg text-[#ffffff80] text-4xl text-white"><i aria-hidden="true" class="fas fa-file-pdf"></i></span>
+                        <span class="text-sm">Whitepaper</span>
+                    </span>
+                </div>
+                <button class="bg-white hover:bg-pink-400 group w-52 px-2 py-3 transition-all duration-300 rounded-full font-medium flex items-center justify-center gap-5">
+                    <span class="text-black text-sm font-bold group-hover:text-white">Send Message</span><span
+                      class="bg-gradient-to-b from-violet-500 to-pink-500 group-hover:text-white bg-clip-text text-transparent font-bold"><i
+                        class="fa-solid fa-chevron-right"></i></span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="relative flex flex-row gap-20 mx-20 mb-20">
+        <div  class="w-1/4">
+            <h3 class="text-2xl font-normal mb-4">Usefull Links</h3>
+            <ul class="text-gray-300 font-normal flex flex-col gap-4">
+                <li>Contact us</li>
+                <li>How it Works</li>
+                <li>Create</li>
+                <li>Explore</li>
+                <li>Terms & Services</li>
+            </ul>
+        </div>
+        <div class="w-1/4">
+            <h3 class="text-2xl font-normal mb-4">Usefull Links</h3>
+            <ul class="text-gray-300 font-normal flex flex-col gap-4">
+                <li>Contact us</li>
+                <li>How it Works</li>
+                <li>Create</li>
+                <li>Explore</li>
+                <li>Terms & Services</li>
+            </ul>
+        </div>
+        <div class="w-1/4">
+            <h3 class="text-2xl font-normal mb-4">Usefull Links</h3>
+            <ul class="text-gray-300 font-normal flex flex-col gap-4">
+                <li>Contact us</li>
+                <li>How it Works</li>
+                <li>Create</li>
+                <li>Explore</li>
+                <li>Terms & Services</li>
+            </ul>
+        </div>
+        <div class="w-[40%] flex flex-col gap-10 font-light">
+          <div>SIGN UP FOR EMAIL UPDATES</div>
+          <div>
+            Sign up with your email address to receive <br />
+            news and updates
+          </div>
+          <div class="relative w-full">
+            <input type="text" placeholder="Enter your email" class="p-5 w-full rounded-full bg-white text-black pe-40" />
+            <span
+              class="absolute right-1 top-1/2 -translate-y-1/2 bg-gradient-to-r from-pink-500 to-violet-500 px-8 py-4 rounded-full">Subscribe</span>
+          </div>
+        </div>
+      </footer>
+
+      <div class="w-full clear-start flex flex-col gap-5 mb-5">
+      <div class="w-full h-[1px] bg-gradient-to-r from-transparent via-gray-200 to-transparent"></div>
+      <div class="text-center font-normal">Copyright © 2024 CREBIT | All rights reserved.</div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        const screenHeight = $(window).height() / 2;
+
+      $(window).scroll(function () {
+        if ($(this).scrollTop() > screenHeight) {
+          // Add sticky behavior and background color
+          $("#navbar")
+            .removeClass("bg-transparent")
+            .addClass("fixed top-0 w-full px-20 bg-[#13141e] opacity-100");
+        } else {
+          // Remove background color when scrolling back to top
+          $("#navbar")
+            .removeClass("fixed bg-[#13141e]")
+            .addClass("bg-transparent");
+        }
+      });
+    })
+</script>
+
+</body>
+
+</html>
